@@ -152,6 +152,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/04/hello-world/">hello world</a>
+    </h1>
+  
+
+        
+        <a href="/2022/11/04/hello-world/" class="archive-article-date">
+  	<time datetime="2022-11-03T16:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/04/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-BulidBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -181,7 +243,7 @@
 
 <p>不过这样可能会非常非常慢，这里的操作就是为你创建了一个文件夹，做好了一些基本的框架，这个框架可以直接从 <code>github</code> 上 <code>clone</code> 到本地，操作如下</p>
 <ul>
-<li><p>输入网址，打开官网的仓库 </p>
+<li><p>输入网址，打开官网的仓库 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter/">https://github.com/hexojs/hexo-starter/</a></p>
 </li>
 <li><p>将仓库克隆或者直接下载 <code>zip</code> 文件解压到本地文件夹</p>
    <img src="/2022/11/03/BulidBlog/image-20221103131933195-16674864110201.png" class="">
@@ -269,9 +331,14 @@
 <p>首先安装依赖</p>
 <p><code>cnpm i hexo-generator-json-content --save</code></p>
 <p>然后在 <code>_config.yml</code> 文件中添加如下内容（加在最后即可）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jsonContent</span>:</span><br><span class="line">    <span class="attr">meta</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">pages</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">posts</span>:</span><br><span class="line">    <span class="attr">title</span>: <span class="literal">true</span></span><br><span class="line">    <span class="attr">date</span>: <span class="literal">true</span></span><br><span class="line">    <span class="attr">path</span>: <span class="literal">true</span></span><br><span class="line">    <span class="attr">text</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">raw</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">content</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">slug</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">updated</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">comments</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">link</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">permalink</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">excerpt</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">categories</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">tags</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><font color=red>注意：这里的格式要严格按要求来，第一行前没有空格，接下来三行前1个空格，剩下的2个空格。</font></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jsonContent</span>:</span><br><span class="line"> <span class="attr">meta</span>: <span class="literal">false</span></span><br><span class="line"> <span class="attr">pages</span>: <span class="literal">false</span></span><br><span class="line"> <span class="attr">posts</span>:</span><br><span class="line">  <span class="attr">title</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">date</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">path</span>: <span class="literal">true</span></span><br><span class="line">  <span class="attr">text</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">raw</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">content</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">slug</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">updated</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">comments</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">link</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">permalink</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">excerpt</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">categories</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">tags</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
+<p> 由于我尝试的时候多打了空格，修正后出现如下提示，Windows 上是 CRLF 格式，而 <code>github</code> 上是 LF 格式，对于 <code>TAB</code> 键的理解不一样，多打空格或者直接使用 CRLF 格式下的 <code>TAB</code> 远端的目录不能正常显示</p>
+ <img src="/2022/11/03/BulidBlog/image-20221104002721625.png" class="" title="image-20221104002721625">
 
+<p>修正后显示如下</p>
+ <img src="/2022/11/03/BulidBlog/image-20221104003002932.png" class="" title="image-20221104003002932">
 
 <h2 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h2><p>参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20">https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20</a></p>
 <ul>
