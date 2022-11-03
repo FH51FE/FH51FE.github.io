@@ -20,13 +20,13 @@
 <meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103225943767.png">
 <meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103132839306.png">
 <meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103133047336.png">
-<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192716625.png">
-<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192849881.png">
-<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103194043342.png">
-<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103195044841.png">
+<meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103192716625-16674907192877.png">
+<meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103192849881-16674907029805.png">
+<meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103194043342-16674906800403.png">
+<meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103195044841-16674906609241.png">
 <meta property="og:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103233923305.png">
 <meta property="article:published_time" content="2022-11-03T15:08:16.374Z">
-<meta property="article:modified_time" content="2022-11-03T15:48:35.019Z">
+<meta property="article:modified_time" content="2022-11-03T15:52:08.736Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2022/11/03/BulidBlog/image-20221103131933195-16674864110201.png">
@@ -246,9 +246,11 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>部署完成后可以看到如下提示，说明部署成功！</p>
-<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192716625.png" alt="image-20221103192716625"></p>
+ <img src="/2022/11/03/BulidBlog/image-20221103192716625-16674907192877.png" class="">
+
 <p>此时在 <code>github</code> 仓库中可以看到 <code>blog</code> 的文件内容</p>
-<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192849881.png" alt="image-20221103192849881"></p>
+ <img src="/2022/11/03/BulidBlog/image-20221103192849881-16674907029805.png" class="">
+
 <p>之后就可以直接使用 <code>https://your_github_name.github.io/</code> 网址查看自己的博客了，不需要每次重新启动本地服务器</p>
 </li>
 </ul>
@@ -265,30 +267,33 @@
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>首先在本地服务器查看，主题已经修改成功</p>
-<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103194043342.png" alt="image-20221103194043342"></p>
+ <img src="/2022/11/03/BulidBlog/image-20221103194043342-16674906800403.png" class="">
+
 <p>再次推送到远端</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>推送成功后，可以在远端仓库看到新的推送，刷新界面，可以看到主题修改成功 <code>https://fh51fe.github.io/</code> </p>
 <h2 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h2><p>参考博客： </p>
-<ol>
-<li><p>**修改 <code>_config.yml</code> **</p>
-<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103195044841.png" alt="image-20221103195044841"></p>
+<ul>
+<li>**修改 <code>_config.yml</code> **</li>
+</ul>
+ <img src="/2022/11/03/BulidBlog/image-20221103195044841-16674906609241.png" class="">
+
 <p>修改</p>
 <p><code>post_asset_folder: false </code> 为 <code>post_asset_folder: true</code></p>
 <p>完成安装后用hexo新建文章的时候会发现_posts目录下面会多出一个和文章名字一样的文件夹。图片就可以放在文件夹下面。</p>
-</li>
-<li><p><strong>修改 <code>Typora</code></strong></p>
+<ul>
+<li><strong>修改 <code>Typora</code></strong></li>
+</ul>
 <p>搭配 <code>Typora</code> 使用，更加方便，设置 <code>Typora</code> 图片插入设置</p>
 <p><kbd> 文件->偏好设置</kbd></p>
  <img src="/2022/11/03/BulidBlog/image-20221103233923305.png" class="" title="image-20221103233923305">
 
 <p>完成以上设置之后，插入图片就会自动保存在与 <code>.md</code> 文件同名的文件夹下，并且引用路径为图片的相对路径，之后就可以正常显示图片了。</p>
-</li>
-<li><p><strong>安装插件</strong></p>
+<ul>
+<li><strong>安装插件</strong></li>
+</ul>
 <p><code>cnpm install hexo-asset-img --save</code></p>
-</li>
-</ol>
 <p>安装好插件之后，再次将博客上传到仓库，查看网页，即可看到图片正常显示</p>
 <p><code>hexo clean</code></p>
 <p><code>hexo g</code></p>
