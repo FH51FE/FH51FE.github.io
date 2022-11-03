@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="[TOC] Record my blog’s building前言按照官网的操作一步步来，基本就可以完成hexo静态博客网页的搭建，但是操作过程中可能会遇到一些问题，鉴于此，记录一下自己的搭建过程。 本人主机环境是 Windows10 首先附上官网的中文教程地址： https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 参考视频： https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/11/03/BulidBlog/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] Record my blog’s building前言按照官网的操作一步步来，基本就可以完成hexo静态博客网页的搭建，但是操作过程中可能会遇到一些问题，鉴于此，记录一下自己的搭建过程。 本人主机环境是 Windows10 首先附上官网的中文教程地址： https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 参考视频： https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;e">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/BulidBlog/image-20221103131933195-16674864110201.png">
+<meta property="og:image" content="http://example.com/BulidBlog/image-20221103132129981.jpg">
+<meta property="og:image" content="http://example.com/BulidBlog/image-20221103225943767.png">
+<meta property="og:image" content="http://example.com/BulidBlog/image-20221103132839306.png">
+<meta property="og:image" content="http://example.com/BulidBlog/image-20221103133047336.png">
+<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192716625.png">
+<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192849881.png">
+<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103194043342.png">
+<meta property="og:image" content="f:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103195044841.png">
+<meta property="article:published_time" content="2022-11-03T15:08:16.374Z">
+<meta property="article:modified_time" content="2022-11-03T15:11:17.423Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/BulidBlog/image-20221103131933195-16674864110201.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-BulidBlog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/03/BulidBlog/" class="article-date">
+  <time class="dt-published" datetime="2022-11-03T15:08:16.374Z" itemprop="datePublished">2022-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="Record-my-blog’s-building"><a href="#Record-my-blog’s-building" class="headerlink" title="Record my blog’s building"></a>Record my blog’s building</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>按照官网的操作一步步来，基本就可以完成<code>hexo</code>静态博客网页的搭建，但是操作过程中可能会遇到一些问题，鉴于此，记录一下自己的搭建过程。</p>
+<p>本人主机环境是 Windows10</p>
+<p>首先附上官网的中文教程地址： <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+<p>参考视频： <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=erKYtw4Rfhk">https://www.youtube.com/watch?v=erKYtw4Rfhk</a></p>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul>
+<li><p>首先最基本的就是安装 <code>Git</code> 和 <code>Node.js</code></p>
+<p>查看是否安装成功</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node <span class="literal">-v</span></span><br><span class="line">npm <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
+
+<p>需要使用到包管理器 <code>npm</code> ，但是国内 <code>npm</code> 非常慢，所以利用 <code>npm</code> 安装一个淘宝的源 <code>cnpm</code></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="literal">-g</span> cnpm <span class="literal">--registry</span>=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后安装 <code>hexo</code>，直接用淘宝镜像安装，不然真的很慢</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="literal">-g</span> hexo<span class="literal">-cli</span> <span class="literal">--registry</span>=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>检查 <code>hexo</code> 是否安装成功</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在本地初始化博客文件夹，这里我的文件夹名称是 <code>blog</code></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>不过这样可能会非常非常慢，这里的操作就是为你创建了一个文件夹，做好了一些基本的框架，这个框架可以直接从 <code>github</code> 上 <code>clone</code> 到本地，操作如下</p>
+<ul>
+<li><p>输入网址，打开官网的仓库 </p>
+</li>
+<li><p>将仓库克隆或者直接下载 <code>zip</code> 文件解压到本地文件夹</p>
+<p>   <img src="/BulidBlog/image-20221103131933195-16674864110201.png"></p>
+<p>框架安装好之后就可以把它改造成自己的 <code>myblog</code> 文件夹了，这里直接将 <code>hexo-starter</code> 改名为 <code>myblog</code></p>
+<p>点进去就可以看到文件夹中的内容是这样的</p>
+<p> <img src="/BulidBlog/image-20221103132129981.jpg"></p>
+</li>
+</ul>
+</li>
+<li><p>然后进入 <code>myblog</code> 文件夹，安装相关依赖</p>
+<p>可以直接在地址栏输入 <code>cmd</code> 后回车进入当前文件夹路径下的命令行中</p>
+<p> <img src="/BulidBlog/image-20221103225943767.png" alt="image-20221103225943767"></p>
+<p>还是利用淘宝镜像安装相关依赖</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="literal">--registry</span>=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以上完成后，就可以在本机查看当前的 <code>myblog</code> 了，输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p> <img src="/BulidBlog/image-20221103132839306.png"></p>
+<p><code>Ctrl + shift + C</code>赋值红框中的内容，粘贴到网页中打开，可以看到如下界面，本机的 <code>blog</code> 就搭建好了</p>
+<p> <img src="/BulidBlog/image-20221103133047336.png"></p>
+</li>
+</ul>
+<p>到这里，本机的 <code>myblog</code> 网站的就搭建好了。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>您可以在 <code>_config.yml</code> 中修改大部分的配置。</p>
+<h2 id="创建一篇博客"><a href="#创建一篇博客" class="headerlink" title="创建一篇博客"></a>创建一篇博客</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;BuildBlog&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编写完博客之后，清理博客，重新生成</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>再次运行博客，就可以在主页看到这篇博文了</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="将博客部署到-github-上"><a href="#将博客部署到-github-上" class="headerlink" title="将博客部署到 github 上"></a>将博客部署到 <code>github</code> 上</h2><ul>
+<li><p>首先在GitHub上创建一个仓库，必须以 <code>.io</code> 结尾</p>
+</li>
+<li><p>安装插件</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="literal">--save</span> hexo<span class="literal">-deployer-git</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置 <code>_config.yml</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line">deploy: </span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/your_github_name/your_github_name.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>修改完后部署到远端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署完成后可以看到如下提示，说明部署成功！</p>
+<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192716625.png" alt="image-20221103192716625"></p>
+<p>此时在 <code>github</code> 仓库中可以看到 <code>blog</code> 的文件内容</p>
+<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103192849881.png" alt="image-20221103192849881"></p>
+<p>之后就可以直接使用 <code>https://fh51fe.github.io/</code> 网址查看自己的博客了，不需要每次重新启动本地服务器</p>
+</li>
+</ul>
+<h2 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h2><p>选择一个好看的主题 <code>clone</code> 到本地 <code>blog</code> 目录下的 <code>themes</code> 目录下</p>
+<p>首先在 <code>blog</code> 文件夹下进入命令行，然后输入如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+
+<p>继续修改 <code>config.yml</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+
+<p>然后</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>首先在本地服务器查看，主题已经修改成功</p>
+<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103194043342.png" alt="image-20221103194043342"></p>
+<p>再次推送到远端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>推送成功后，可以在远端仓库看到新的推送，刷新界面，可以看到主题修改成功 <code>https://fh51fe.github.io/</code> </p>
+<h2 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/DreamHome_S/article/details/90142578?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-90142578-blog-98497054.pc_relevant_3mothn_strategy_recovery&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-90142578-blog-98497054.pc_relevant_3mothn_strategy_recovery&amp;utm_relevant_index=2">https://blog.csdn.net/DreamHome_S/article/details/90142578?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-90142578-blog-98497054.pc_relevant_3mothn_strategy_recovery&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-90142578-blog-98497054.pc_relevant_3mothn_strategy_recovery&amp;utm_relevant_index=2</a></p>
+<p> <img src="F:\Blog_FH_FE\blog\source_posts\BulidBlog\image-20221103195044841.png" alt="image-20221103195044841"></p>
+<p>修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: false</span><br></pre></td></tr></table></figure>
+
+<p>为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<p>完成安装后用hexo新建文章的时候会发现_posts目录下面会多出一个和文章名字一样的文件夹。图片就可以放在文件夹下面。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/11/03/BulidBlog/" data-id="cla17cxud0001mkuof4nc9qev" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/11/03/BulidBlog/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
