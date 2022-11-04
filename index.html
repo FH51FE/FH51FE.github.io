@@ -5,21 +5,21 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
+  <link rel="dns-prefetch" href="https://fh51fe.github.io">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="https://fh51fe.github.io/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="FH_FE">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/assets/ico.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/me.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -55,7 +55,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -101,13 +103,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/me.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -130,12 +134,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -152,10 +158,193 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-BuildBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+    <article id="post-Hexo-Yilia进阶" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+
     
+
       <header class="article-header">
+
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/">Hexo-Yilia进阶</a>
+    </h1>
+  
+
+
+        
+
+        <a href="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/" class="archive-article-date">
+  	<time datetime="2022-11-04T01:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-04</time>
+</a>
+
+        <!-- 需要添加的位置 -->
+
+        <!-- 开始添加字数统计-->
+
+        
+
+        <!-- 添加完成 -->
+
+        
+  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo-Yilia-进阶"><a href="#Hexo-Yilia-进阶" class="headerlink" title="Hexo Yilia 进阶"></a>Hexo Yilia 进阶</h1><p>有了基本的博客框架，下面来优化博客界面，丰富其功能</p>
+<p>参考博： <a target="_blank" rel="noopener" href="https://tding.top/archives/9a232bbe.html">https://tding.top/archives/9a232bbe.html</a></p>
+<h2 id="一、-分类的构建"><a href="#一、-分类的构建" class="headerlink" title="一、 分类的构建"></a>一、 分类的构建</h2><h3 id="1-添加-categories-链接"><a href="#1-添加-categories-链接" class="headerlink" title="1. 添加 categories 链接"></a>1. 添加 categories 链接</h3><p>修改 <code>myblog/themes/yilia/_config.yml</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu</span>:</span><br><span class="line">  主页: /</span><br><span class="line">  随笔: <span class="regexp">/tags/</span>随笔/</span><br></pre></td></tr></table></figure>
+
+<p>将上面内容修改为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu</span>:</span><br><span class="line">  主页: /</span><br><span class="line">  分类: /categories</span><br><span class="line">  归档: /archives</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-分类页面的构造"><a href="#2-分类页面的构造" class="headerlink" title="2. 分类页面的构造"></a>2. 分类页面的构造</h3><ul>
+<li><p>新键 <code>categories</code> 页面</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>该命令在 source 目录下生成一个 categories 目录，categories 目录下有一个 <code>index.md</code> 文件。</p>
+</li>
+<li><p>修改 <code>myblog\source\categories\index.md</code> 为</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2022-11-04 09:13:44</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line"><span class="section">comments: false</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成 <code>html</code></p>
+<p><code>hexo g</code></p>
+<p><code>hexo s</code></p>
+<p>访问 <code>http://localhost:4000/categories/</code> ，即可看到 categories 页面</p>
+</li>
+</ul>
+<h3 id="3-修改-yilia-主题"><a href="#3-修改-yilia-主题" class="headerlink" title="3. 修改 yilia 主题"></a>3. 修改 yilia 主题</h3><p>修改 <code>yilia\source\main.0cf68a.css</code>，将下面的内容添加进去：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">category-<span class="attribute">all</span>-page &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">30px</span> <span class="number">40px</span> <span class="number">30px</span> <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">70vh</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-all-title</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-all</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-item-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">15px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-item-list-count</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: $grey;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-item-list-count</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; (&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-item-list-count</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;) &quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-count</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: $grey;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-count</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; (&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-count</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;) &quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.category-all-page</span> <span class="selector-class">.category-list-child</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时文末出现如下图标</p>
+ <img src="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/image-20221104092945758.png" class="" title="image-20221104092945758">
+
+<h3 id="4-多层分类"><a href="#4-多层分类" class="headerlink" title="4. 多层分类"></a>4. 多层分类</h3><p><font color=red>新建 </font><code>yilia/layout/categories.ejs</code>，输入：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;article <span class="keyword">class</span>=<span class="string">&quot;article article-type-post show&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;article-header&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border-bottom: 1px solid #ccc&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;article-title&quot;</span> <span class="attr">itemprop</span>=<span class="string">&quot;name&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &lt;%= page.title %&gt;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">  &lt;% <span class="keyword">if</span> (site.<span class="property">categories</span>.<span class="property">length</span>)&#123; %&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;category-all-page&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>共计<span class="symbol">&amp;nbsp;</span>&lt;%= site.categories.length %&gt;<span class="symbol">&amp;nbsp;</span>个分类<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    &lt;%- list_categories(site.categories, &#123;</span></span><br><span class="line"><span class="language-xml">      show_count: true,</span></span><br><span class="line"><span class="language-xml">      class: &#x27;category-list-item&#x27;,</span></span><br><span class="line"><span class="language-xml">      style: &#x27;list&#x27;,</span></span><br><span class="line"><span class="language-xml">      depth: 2,</span></span><br><span class="line"><span class="language-xml">      separator: &#x27;&#x27;</span></span><br><span class="line"><span class="language-xml">    &#125;) %&gt;</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line">&lt;/article&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-为自己的文章设置分类和标签"><a href="#5-为自己的文章设置分类和标签" class="headerlink" title="5. 为自己的文章设置分类和标签"></a>5. 为自己的文章设置分类和标签</h3><p>完成上述操作后，以后创建一篇新文章时，就可以在开头完成归档工作</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo-Yilia进阶</span><br><span class="line"></span><br><span class="line">copyright: true</span><br><span class="line">date: 2022-11-04 09:04:43</span><br><span class="line"></span><br><span class="line">toc: true</span><br><span class="line">tags: [HTML,前端]</span><br><span class="line"><span class="section">categories: [前端,HTML]</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>在页面中就可以看到归档的内容了</p>
+ <img src="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/image-20221104093403451.png" class="" title="image-20221104093403451">
+
+<h2 id="二、-设置头像-x2F-图标"><a href="#二、-设置头像-x2F-图标" class="headerlink" title="二、 设置头像&#x2F;图标"></a>二、 设置头像&#x2F;图标</h2><h3 id="1-存放位置"><a href="#1-存放位置" class="headerlink" title="1. 存放位置"></a>1. 存放位置</h3><p>头像、图标图片的存放位置是 <code>myblog/themes/yilia/source/</code> 下任意位置，可以自己新建一个文件夹<code>assets</code> 存放。</p>
+<h3 id="2-配置设置"><a href="#2-配置设置" class="headerlink" title="2. 配置设置"></a>2. 配置设置</h3><p>配置文件为 <code>/themes/yilia/_config.yml</code>。</p>
+<ul>
+<li>设置头像为配置文件中 <code>avatar</code> 一项</li>
+<li>设置图标为配置文件中 <code>favicon</code> 一项</li>
+</ul>
+<p>由于设置路径的根目录 <code>/themes/yilia/source/</code>，因此，我的头像存放的地址是 <code>/themes/yilia/source/assets/me.png</code>，设置则为 <code>avatar: /assets/me.png</code>。</p>
+<p>网页图标同理修改 <code>favicon: /assets/ico.png</code>,效果如下</p>
+ <img src="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/image-20221104094841978.png" class="" title="image-20221104094841978">
+
+<h2 id="三、添加评论"><a href="#三、添加评论" class="headerlink" title="三、添加评论"></a>三、添加评论</h2><h2 id="四、添加页面访问量"><a href="#四、添加页面访问量" class="headerlink" title="四、添加页面访问量"></a>四、添加页面访问量</h2><h3 id="1-添加站点访问量"><a href="#1-添加站点访问量" class="headerlink" title="1. 添加站点访问量"></a>1. 添加站点访问量</h3><p>下面是个人改变完成后的 <code>\themes\yilia\layout\_partial\footer.ejs</code> 文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">id</span>=<span class="string">&quot;footer&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;footer-info&quot;</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer-left&quot;</span>&gt;</span></span><br><span class="line">    		<span class="symbol">&amp;copy;</span> &lt;%= date(new Date(), &#x27;YYYY&#x27;) %&gt; &lt;%= config.author || config.title %&gt;</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer-right&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">            <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">      		<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span></span><br><span class="line">                本站总访问量：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_pv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line">            <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span></span><br><span class="line">                本站访客数：<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_site_uv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人</span><br><span class="line">            <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">      	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>原主题的支付宝之类的显示去掉了</p>
+<h3 id="2-添加文章访问量"><a href="#2-添加文章访问量" class="headerlink" title="2. 添加文章访问量"></a>2. 添加文章访问量</h3><p>下面是个人改变完成后的 <code>\themes\yilia\layout\_partial\article.ejs</code> 文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;article-header&quot;</span>&gt;</span></span><br><span class="line">  &lt;%- partial(&#x27;post/title&#x27;, &#123;class_name: &#x27;article-title&#x27;&#125;) %&gt;</span><br><span class="line">  &lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">  &lt;%- partial(&#x27;post/date&#x27;, &#123;class_name: &#x27;archive-article-date&#x27;, date_format: null&#125;) %&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">&quot;article-header&quot;</span>&gt;</span></span><br><span class="line">  &lt;%- partial(&#x27;post/title&#x27;, &#123;class_name: &#x27;article-title&#x27;&#125;) %&gt;</span><br><span class="line">  &lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">  &lt;%- partial(&#x27;post/date&#x27;, &#123;class_name: &#x27;archive-article-date&#x27;, date_format: null&#125;) %&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">  &lt;% if ( !index )&#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;archive-article-date&quot;</span>&gt;</span></span><br><span class="line">        阅读量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;busuanzi_value_page_pv&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>保证了每篇文章都有阅读量统计，同时这里加一个 if 判断，如果是首页不显示该文章的访问量。</p>
+<h2 id="五、Hexo-Yilia-网站运行时间"><a href="#五、Hexo-Yilia-网站运行时间" class="headerlink" title="五、Hexo-Yilia 网站运行时间"></a>五、Hexo-Yilia 网站运行时间</h2><p>在 <code>hexo/themes/yelee/layout/_partial/footer.ejs</code> 文件中 <code>&lt;div class=&quot;footer-left&quot;&gt;</code> 内（具体位置可自选）加入如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=<span class="string">&quot;timeDate&quot;</span>&gt;载入天数...&lt;<span class="regexp">/span&gt;&lt;span id=&quot;times&quot;&gt;载入时分秒...&lt;/</span>span&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="keyword">var</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>(); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="keyword">function</span> <span class="title function_">createtime</span>(<span class="params"></span>) &#123; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		<span class="keyword">var</span> grt= <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&quot;11/4/2022 10:00:00&quot;</span>);<span class="comment">//此处修改你的建站时间或者网站上线时间 </span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		now.<span class="title function_">setTime</span>(now.<span class="title function_">getTime</span>()+<span class="number">250</span>); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		days = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>; dnum = <span class="title class_">Math</span>.<span class="title function_">floor</span>(days); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		hours = (now - grt ) / <span class="number">1000</span> / <span class="number">60</span> / <span class="number">60</span> - (<span class="number">24</span> * dnum); hnum = <span class="title class_">Math</span>.<span class="title function_">floor</span>(hours); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		<span class="keyword">if</span>(<span class="title class_">String</span>(hnum).<span class="property">length</span> ==<span class="number">1</span> )&#123;hnum = <span class="string">&quot;0&quot;</span> + hnum;&#125; minutes = (now - grt ) / <span class="number">1000</span> /<span class="number">60</span> - (<span class="number">24</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * hnum); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		mnum = <span class="title class_">Math</span>.<span class="title function_">floor</span>(minutes); <span class="keyword">if</span>(<span class="title class_">String</span>(mnum).<span class="property">length</span> ==<span class="number">1</span> )&#123;mnum = <span class="string">&quot;0&quot;</span> + mnum;&#125; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		seconds = (now - grt ) / <span class="number">1000</span> - (<span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * dnum) - (<span class="number">60</span> * <span class="number">60</span> * hnum) - (<span class="number">60</span> * mnum); </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		snum = <span class="title class_">Math</span>.<span class="title function_">round</span>(seconds); <span class="keyword">if</span>(<span class="title class_">String</span>(snum).<span class="property">length</span> ==<span class="number">1</span> )&#123;snum = <span class="string">&quot;0&quot;</span> + snum;&#125; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;timeDate&quot;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;本站已安全运行 &quot;</span>+dnum+<span class="string">&quot; 天 &quot;</span>; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">		<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;times&quot;</span>).<span class="property">innerHTML</span> = hnum + <span class="string">&quot; 小时 &quot;</span> + mnum + <span class="string">&quot; 分 &quot;</span> + snum + <span class="string">&quot; 秒&quot;</span>; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	&#125; </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">	<span class="built_in">setInterval</span>(<span class="string">&quot;createtime()&quot;</span>,<span class="number">250</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>注意：日期格式 <code>11/4/2022 10:00:00</code>。</p>
+<h2 id="六、字数、阅读时长添加"><a href="#六、字数、阅读时长添加" class="headerlink" title="六、字数、阅读时长添加"></a>六、字数、阅读时长添加</h2><h3 id="1-安装-hexo-wordcount"><a href="#1-安装-hexo-wordcount" class="headerlink" title="1. 安装 hexo-wordcount"></a>1. 安装 hexo-wordcount</h3><p>在博客目录下打开 Git Bash，输入命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i –save hexo-wordcount</span><br><span class="line">npm install hexo-wordcount</span><br></pre></td></tr></table></figure>
+
+<p>暂时没做出来</p>
+<h2 id="七、添加版权信息"><a href="#七、添加版权信息" class="headerlink" title="七、添加版权信息"></a>七、添加版权信息</h2><h3 id="1-添加版权信息"><a href="#1-添加版权信息" class="headerlink" title="1. 添加版权信息"></a>1. 添加版权信息</h3><p>在 <code>themes/yilia/layout/_partial/article.ejs</code> 中标注的位置添加代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;article-entry&quot;</span> itemprop=<span class="string">&quot;articleBody&quot;</span>&gt;</span><br><span class="line">	&lt;% <span class="keyword">if</span> (post.<span class="property">excerpt</span> &amp;&amp; index)&#123; %&gt;</span><br><span class="line">		&lt;%- post.<span class="property">excerpt</span> %&gt;</span><br><span class="line">		&lt;% <span class="keyword">if</span> (theme.<span class="property">excerpt_link</span>) &#123; %&gt;</span><br><span class="line">			<span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;article-more-a&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- url_for(post.path) %&gt;#more&quot;</span>&gt;</span>&lt;%= theme.excerpt_link %&gt; &gt;&gt;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">		&lt;% &#125; %&gt;</span><br><span class="line">	&lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">		&lt;%- post.<span class="property">content</span> %&gt;</span><br><span class="line">	&lt;% &#125; %&gt;</span><br><span class="line">	&lt;-- 在此处添加代码--&gt;</span><br><span class="line">	&lt;% if ((theme.reward_type === 2 || (theme.reward_type === 1 &amp;&amp; post.reward)) &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">	&lt;div class=&quot;page-reward&quot;&gt;</span><br><span class="line">		&lt;a href=&quot;javascript:;&quot; class=&quot;page-reward-btn tooltip-top&quot;&gt;</span><br><span class="line">		&lt;div class=&quot;tooltip tooltip-east&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+
+  <div class="declare" hidden="hidden"></div>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端/HTML//" class="article-tag-list-link color5">HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/11/04/Hexo-Yilia%E8%BF%9B%E9%98%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-BuildBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+
+    
+
+      <header class="article-header">
+
         
   
     <h1 itemprop="name">
@@ -163,21 +352,33 @@
     </h1>
   
 
+
         
+
         <a href="/2022/11/04/BuildBlog/" class="archive-article-date">
   	<time datetime="2022-11-03T16:55:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-04</time>
 </a>
+
+        <!-- 需要添加的位置 -->
+
+        <!-- 开始添加字数统计-->
+
         
+
+        <!-- 添加完成 -->
+
+        
+  
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>[TOC]</p>
 <h1 id="Record-my-blog’s-building"><a href="#Record-my-blog’s-building" class="headerlink" title="Record my blog’s building"></a>Record my blog’s building</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>按照官网的操作一步步来，基本就可以完成<code>hexo</code>静态博客网页的搭建，但是操作过程中可能会遇到一些问题，鉴于此，记录一下自己的搭建过程。</p>
-<p>本人主机环境是 Windows10</p>
+<p>本人主机环境是 Windows10，使用 hexo 的 yilia 主题</p>
 <p>首先附上官网的中文教程地址： <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
 <p>参考视频： <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=erKYtw4Rfhk">https://www.youtube.com/watch?v=erKYtw4Rfhk</a></p>
-<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul>
+<h2 id="1-建站"><a href="#1-建站" class="headerlink" title="1. 建站"></a>1. 建站</h2><ul>
 <li><p>首先最基本的就是安装 <code>Git</code> 和 <code>Node.js</code></p>
 <p>查看是否安装成功</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node <span class="literal">-v</span></span><br><span class="line">npm <span class="literal">-v</span></span><br></pre></td></tr></table></figure>
@@ -222,8 +423,8 @@
  <img src="/2022/11/04/BuildBlog/image-20221103133047336.png" class=""></li>
 </ul>
 <p>到这里，本机的 <code>myblog</code> 网站的就搭建好了。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>您可以在 <code>_config.yml</code> 中修改大部分的配置。</p>
-<h2 id="创建一篇博客"><a href="#创建一篇博客" class="headerlink" title="创建一篇博客"></a>创建一篇博客</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;BuildBlog&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h2><p>您可以在 <code>_config.yml</code> 中修改大部分的配置。</p>
+<h2 id="3-创建一篇博客"><a href="#3-创建一篇博客" class="headerlink" title="3. 创建一篇博客"></a>3. 创建一篇博客</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;BuildBlog&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>编写完博客之后，清理博客，重新生成</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
@@ -233,8 +434,8 @@
 
 
 
-<h2 id="将博客部署到-github-上"><a href="#将博客部署到-github-上" class="headerlink" title="将博客部署到 github 上"></a>将博客部署到 <code>github</code> 上</h2><ul>
-<li><p>首先在GitHub上创建一个仓库，必须以 <code>.io</code> 结尾</p>
+<h2 id="4-将博客部署到-github-上"><a href="#4-将博客部署到-github-上" class="headerlink" title="4. 将博客部署到 github 上"></a>4. 将博客部署到 <code>github</code> 上</h2><ul>
+<li><p>首先在GitHub上创建一个仓库，名称为 <code>your_github_name.github.io</code></p>
 </li>
 <li><p>安装插件</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="literal">--save</span> hexo<span class="literal">-deployer-git</span></span><br></pre></td></tr></table></figure>
@@ -257,7 +458,7 @@
 <p>之后就可以直接使用 <code>https://your_github_name.github.io/</code> 网址查看自己的博客了，不需要每次重新启动本地服务器</p>
 </li>
 </ul>
-<h2 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h2><p>选择一个好看的主题 <code>clone</code> 到本地 <code>myblog</code> 目录下的 <code>themes</code> 目录下</p>
+<h2 id="5-更换博客主题"><a href="#5-更换博客主题" class="headerlink" title="5. 更换博客主题"></a>5. 更换博客主题</h2><p>选择一个好看的主题 <code>clone</code> 到本地 <code>myblog</code> 目录下的 <code>themes</code> 目录下</p>
 <p>首先在 <code>myblog</code> 文件夹下进入命令行，然后输入如下命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
@@ -305,7 +506,7 @@
  <img src="/2022/11/04/BuildBlog/image-20221104005639661.png" class="" title="image-20221104005639661">
 
 <p>将 <code>.md</code> 文件和同名的文件夹中的图片都复制到新建的文件中即可</p>
-<h2 id="图片显示问题"><a href="#图片显示问题" class="headerlink" title="图片显示问题"></a>图片显示问题</h2><p>参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20">https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20</a></p>
+<h2 id="6-图片显示问题"><a href="#6-图片显示问题" class="headerlink" title="6. 图片显示问题"></a>6. 图片显示问题</h2><p>参考博客： <a target="_blank" rel="noopener" href="https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20">https://blog.csdn.net/z952957407/article/details/111642548?spm=1001.2101.3001.6650.17&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Rate-17-111642548-blog-123534147.pc_relevant_multi_platform_whitelistv3&amp;utm_relevant_index=20</a></p>
 <ul>
 <li><strong>修改 <code>_config.yml</code></strong></li>
 </ul>
@@ -330,8 +531,12 @@
 <p><code>hexo clean</code></p>
 <p><code>hexo g</code></p>
 <p><code>hexo d</code></p>
+<p><font face="华文彩云" color=blue size=5>到这里基本的博客框架就搭建好了，好耶~</font></p>
 
       
+
+
+  <div class="declare" hidden="hidden"></div>
 
       
     </div>
@@ -372,68 +577,6 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/11/04/hello-world/">hello world</a>
-    </h1>
-  
-
-        
-        <a href="/2022/11/04/hello-world/" class="archive-article-date">
-  	<time datetime="2022-11-03T16:37:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/11/04/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -444,10 +587,38 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2022 John Doe
+    		&copy; 2022 FH_FE
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+	var now = new Date(); 
+	function createtime() { 
+		var grt= new Date("11/4/2022 10:00:00");//此处修改你的建站时间或者网站上线时间 
+		now.setTime(now.getTime()+250); 
+		days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+		hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+		if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+		mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+		seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+		snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+		document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+		document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+	} 
+	setInterval("createtime()",250);
+</script>
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+    
+    
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                本站总访问量：<span id="busuanzi_value_site_pv"></span>次
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                本站访客数：<span id="busuanzi_value_site_uv"></span>人
+            </span>
+    
+    
       	</div>
     </div>
   </div>
@@ -525,6 +696,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
